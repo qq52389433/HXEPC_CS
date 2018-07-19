@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{951DABFC-2A89-4613-A292-744A897C4A93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HXEPC_Plugins</RootNamespace>
+    <AssemblyName>HXEPC_Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoCADManager">
+      <HintPath>..\DLL\AutoCADManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CDMSServer">
+      <HintPath>..\DLL\CDMSServer.dll</HintPath>
+    </Reference>
+    <Reference Include="CDMSWebApi">
+      <HintPath>..\DLL\CDMSWebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSScriptControl">
+      <HintPath>..\DLL\Interop.MSScriptControl.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="linq2db">
+      <HintPath>..\DLL\linq2db.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonFunction.cs" />
+    <Compile Include="Company\Company.cs" />
+    <Compile Include="Company\EditDepartment.cs" />
+    <Compile Include="Company\EditCompany.cs" />
+    <Compile Include="Company\EditDepartmentMenu.cs" />
+    <Compile Include="Company\EditCompanyMenu.cs" />
+    <Compile Include="Company\AddCompanyMenu.cs" />
+    <Compile Include="Company\SelectProject.cs" />
+    <Compile Include="Company\SelectSystem.cs" />
+    <Compile Include="Company\SelectCrew.cs" />
+    <Compile Include="Company\SelectFactory.cs" />
+    <Compile Include="Company\SelectArea.cs" />
+    <Compile Include="Document\DraftReportMenu.cs" />
+    <Compile Include="Document\ImportFileMenu.cs" />
+    <Compile Include="HXProject\EditFactory.cs" />
+    <Compile Include="HXProject\EditSystem.cs" />
+    <Compile Include="HXProject\EditCrew.cs" />
+    <Compile Include="HXProject\EditProjectGroupMenu.cs" />
+    <Compile Include="Company\SelectDepartment.cs" />
+    <Compile Include="Company\SelectWorkSub.cs" />
+    <Compile Include="Company\SelectReceiveType.cs" />
+    <Compile Include="Company\SelectProfession.cs" />
+    <Compile Include="Company\SelectUnit.cs" />
+    <Compile Include="HXProject\CreateProject.cs" />
+    <Compile Include="HXProject\CreatePrjDocumentMenu.cs" />
+    <Compile Include="Document\Document.cs" />
+    <Compile Include="Document\DraftRecognitionMenu.cs" />
+    <Compile Include="Document\DraftTransmittalCNMenu.cs" />
+    <Compile Include="Document\DraftLetterCNMenu.cs" />
+    <Compile Include="Document\DraftMeetMinutesMenu.cs" />
+    <Compile Include="Document\DraftDocumentMenu.cs" />
+    <Compile Include="Document\Recognition.cs" />
+    <Compile Include="Document\MeetMinutesCN.cs" />
+    <Compile Include="Document\RecDocument.cs" />
+    <Compile Include="Document\TransmittalCN.cs" />
+    <Compile Include="Document\LetterCN.cs" />
+    <Compile Include="EnterPoint.cs" />
+    <Compile Include="HXProject\EditProjectInfoMenu.cs" />
+    <Compile Include="HXProject\HXProject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

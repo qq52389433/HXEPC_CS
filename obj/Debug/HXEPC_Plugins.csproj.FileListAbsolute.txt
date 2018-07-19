@@ -1,0 +1,5 @@
+E:\qgy2017\CDMSWeb\DLL\HXEPC_Plugins.dll
+E:\qgy2017\CDMSWeb\DLL\HXEPC_Plugins.pdb
+E:\qgy2017\CDMSWeb\CDMSWeb\HXEPC_Plugins\obj\Debug\HXEPC_Plugins.csprojResolveAssemblyReference.cache
+E:\qgy2017\CDMSWeb\CDMSWeb\HXEPC_Plugins\obj\Debug\HXEPC_Plugins.dll
+E:\qgy2017\CDMSWeb\CDMSWeb\HXEPC_Plugins\obj\Debug\HXEPC_Plugins.pdb
