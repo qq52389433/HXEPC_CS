@@ -1,12 +1,12 @@
         private void btnOK_Click(object sender, EventArgs e)
         {
-            try
+              try
             {
                 if (this.IsUpEdition && String.IsNullOrEmpty(this.txtChangeReason.Text))
-                {
-                    MessageBox.Show("请选择设计变更原因！");
-                    return;
-                }
+                    {
+                        MessageBox.Show("请选择设计变更原因！");
+                        return;
+                    }
                 if (this.txtDocNum2.Text.Trim() == "00")
                 {
                     MessageBox.Show("请正确填写资料单编号！不能以第00号命名");
@@ -196,8 +196,7 @@
                                 FTPFactory factory = this.m_Project.Storage.FTP ?? new FTPFactory(this.m_Project.Storage);
                                 string locFileName = this.m_Project.dBSource.LoginUser.WorkingPath + item.Code + ".docx";
                                 factory.download(@"\ISO\" + str7 + ".docx", locFileName, false);
-                                CDMSOffice office = new CDMSOffice
-                                {
+                                CDMSOffice office = new CDMSOffice {
                                     CloseApp = true,
                                     VisibleApp = false
                                 };
@@ -206,7 +205,7 @@
                                 factory.upload(locFileName, item.FullPathFile);
                                 factory.close();
                                 FileInfo info = new FileInfo(locFileName);
-                                int length = (int)info.Length;
+                                int length = (int) info.Length;
                                 item.O_size = new int?(length);
                                 item.Modify();
                                 base.DialogResult = DialogResult.OK;
